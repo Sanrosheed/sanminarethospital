@@ -16,7 +16,7 @@ const NavBar = () => {
         
         {/* Hamburger icon for mobile */}
         <div className="lg:hidden">
-          <button onClick={handleToggle} className="text-white focus:outline-none">
+          <button onClick={handleToggle} className="text-white focus:outline-none ml-32">
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -77,9 +77,11 @@ const NavBar = () => {
             </a>
           </li>
           <li>
+          <Link href="#appointment">
             <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 w-full">
               Book Now
             </button>
+            </Link>
           </li>
         </ul>
       )}
