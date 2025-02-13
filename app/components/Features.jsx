@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Icon1 from "../../public/vector-10.png";
-import Icon2 from "../../public/Group-84.png";
-import Icon3 from "../../public/vector-11.png";
-import Icon4 from "../../public/vector-12.png";
-import Icon5 from "../../public/vector-13.png";
-import Icon6 from "../../public/vector-14.png";
-import Icon7 from "../../public/vector-15.png";
+import Icon1 from "../../public/vector10.png";
+import Icon2 from "../../public/group84.png";
+import Icon3 from "../../public/vector11.png";
+import Icon4 from "../../public/vector12.png";
+import Icon5 from "../../public/vector13.png";
+import Icon6 from "../../public/vector14.png";
+import Icon7 from "../../public/vector15.png";
 
 const Features = () => {
   const features = [
