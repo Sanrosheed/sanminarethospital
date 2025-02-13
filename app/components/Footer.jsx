@@ -3,7 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 export default function Footer() {
     return (
-      <footer className="bg-[#155A72] text-white py-12">
+      <footer id="contact" className="bg-blue-900 text-white py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
           {/* Where to Find Us */}
           <div>
@@ -24,8 +24,6 @@ export default function Footer() {
               <li>Pediatrics</li>
               <li>Radiology</li>
               <li>Caesarean section</li>
-              {/* <li>Dental Implants</li> */}
-              {/* <li>Skin & Face</li> */}
             </ul>
           </div>
   
@@ -53,7 +51,7 @@ export default function Footer() {
               </a>
             </div>
             <div className="text-lg font-semibold">
-              <a href="tel:08028414000">08028414000</a>
+              <a href="tel:08028414000">08077735732</a>
             </div>
             <div className="text-lg">
               <a href="mailto:drsany13k@gmail.com">sanminaret2020@gmail.com</a>
@@ -64,8 +62,7 @@ export default function Footer() {
         {/* Footer Bottom Section */}
         <div className="border-t mt-8 pt-4 text-center text-sm text-gray-400">
           <p>Complaints Policy | <a href="https://www.gdc-uk.org" className="underline">www.sanminaret.com</a> | Privacy Notice</p>
-          <p>Copyright © SanMinaret Hospital. All rights reserved. Last updated February 2025</p>
-          {/* <p>Website by Hut Six Digital</p> */}
+          <p>Copyright © SanMinaret Hospital. All rights reserved. Last updated 2025</p>
         </div>
       </footer>
     );

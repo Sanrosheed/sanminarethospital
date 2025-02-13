@@ -1,51 +1,110 @@
-// Create a new file called Features.js
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import healthIcon1 from "../../public/healthIcon1.png";
-import healthIcon2 from "../../public/healthIcon2.png";
-import healthIcon3 from "../../public/healthIcon3.png";
-import { FaArrowCircleDown } from "react-icons/fa";
+import Icon1 from "../../public/vector (10).png";
+import Icon2 from "../../public/Group 84.png";
+import Icon3 from "../../public/vector (11).png";
+import Icon4 from "../../public/vector (12).png";
+import Icon5 from "../../public/vector (13).png";
+import Icon6 from "../../public/vector (14).png";
+import Icon7 from "../../public/vector (15).png";
 
 const Features = () => {
   const features = [
     {
-      title: "24/7 Emergency Care",
-      description:
-        "Round-the-clock care when you need it most, ensuring rapid response and expert treatment for urgent medical situations.",
-      icon: <Image src={healthIcon1} alt="Health Icon 1" width={40} height={40} />,
+      title: "General Practice",
+      color: "bg-[#D9DFEF]",
+      icon: Icon1,
+      iconColor: "bg-[#2555D2]",
+      body: "Comprehensive general practice services for all your healthcare needs. Our experienced physicians provide personalized care, preventative treatments, and expert management of acute and chronic conditions for patients of all ages.",
     },
     {
-      title: "Specialist Consultations",
-      description:
-        "Access top-rated specialists across various fields, providing personalized diagnosis and treatment tailored to your needs.",
-      icon: <Image src={healthIcon2} alt="Health Icon 1" width={40} height={40} />,
+      title: "Industrial Medicine",
+      color: "bg-[#EDC5C5]",
+      icon: Icon2,
+      iconColor: "bg-[#D22525]",
+      body: "Specialized industrial medicine services focused on workplace health and safety. We offer occupational health assessments, injury management, and preventative care to ensure the well-being and productivity of your workforce.",
     },
     {
-      title: "Diagnostics and Lab Tests",
-      description:
-        "Comprehensive testing and accurate results with state-of-the-art diagnostic technology to support your health journey.",
-      icon: <Image src={healthIcon3} alt="Health Icon 1" width={40} height={40} />,
+      title: "Surgery",
+      color: "bg-[#EADBB6]",
+      icon: Icon3,
+      iconColor: "bg-[#F0B41C]",
+      body: "Expert surgical care tailored to your needs. Our skilled surgeons provide safe, advanced procedures with precision and compassion, ensuring the best outcomes for your health and recovery.",
+    },
+    {
+      title: "Internal Medicine",
+      color: "bg-[#E5DBA6]",
+      icon: Icon4,
+      iconColor: "bg-[#A38900]",
+      body: "Comprehensive internal medicine care for adults. Our expert physicians diagnose, treat, and manage complex conditions, providing personalized care focused on prevention, wellness, and long-term health management for optimal well-being.",
+    },
+    {
+      title: "Antenatal",
+      color: "bg-[#CDBCBC]",
+      icon: Icon5,
+      iconColor: "bg-[#595656]",
+      body: "Comprehensive antenatal care for expectant mothers, ensuring a healthy pregnancy journey. Our experienced team provides personalized monitoring, education, and support for both mother and baby, from conception to delivery",
+    },
+    {
+      title: "Infertility",
+      color: "bg-[#FBBED7]",
+      icon: Icon6,
+      iconColor: "bg-[#CE2A6E]",
+      body: "Specialized infertility services offering personalized care, advanced diagnostics, and cutting-edge treatments to help individuals and couples overcome challenges and achieve their dream of starting or expanding their family.",
+    },
+    {
+      title: "Pediatrics",
+      color: "bg-[#A9EED3]",
+      icon: Icon7,
+      iconColor: "bg-[#C5B3EA]",
+      body: "Expert pediatric care focused on your child’s health and development. From newborns to teens, we provide compassionate, comprehensive medical services to ensure your child’s well-being at every stage.",
+    },
+    {
+      title: "Emergency Medicine",
+      color: "bg-[#C5B3EA]",
+      icon: Icon1,
+      iconColor: "bg-[#5E24D3]",
+      body: "Rapid, reliable emergency care when it matters most. Our team is equipped to handle urgent medical situations with expertise and compassion, ensuring timely treatment for critical conditions, 24/7.",
     },
   ];
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section id="features" className="bg-[#0E465E] py-16">
-      <h2 className="text-4xl font-bold text-center mb-8 text-white">OUR SERVICES</h2>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-        {features.map((feature, index) => (
-          <div key={index} className="bg-[#155A72] rounded-2xl p-8 text-center text-white">
-            <div className="flex justify-center items-center mb-4">
-              <div className="bg-white rounded-full p-4">
-                {feature.icon}
+    <section id="services" className="bg-gray-100 py-10 mt-14">
+      <div className="container mx-auto text-center">
+        <h3 className="text-2xl md:text-4xl font-bold">Services & Specialists</h3>
+        <p className="mt-2 px-4 text-gray-500">
+          We offer a range of services and areas of expertise which includes
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 mx-8">
+          {features.map((service, index) => (
+            <motion.div
+              key={index}
+              className={`${service.color} p-6 rounded-lg`}
+              initial="hidden"
+              whileInView="visible"
+              variants={cardVariants}
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <div className="flex flex-col justify-center items-center">
+                <div className={`flex justify-center items-center ${service.iconColor} rounded-full p-4 mb-4`}>
+                  <Image
+                    src={service.icon}
+                    alt="Service Icon"
+                    className="h-8 w-8"
+                  />
+                </div>
+                <h4 className="text-xl font-semibold mb-6 mt-2">{service.title}</h4>
               </div>
-            </div>
-            <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-            <p className="text-sm mb-6 font-nunito">{feature.description}</p>
-            <a href="#" className="text-white underline flex items-center justify-center">
-              READ MORE <span className="ml-1"><FaArrowCircleDown /></span>
-            </a>
-          </div>
-        ))}
+              <p className="mt-2 text-gray-600">{service.body}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
