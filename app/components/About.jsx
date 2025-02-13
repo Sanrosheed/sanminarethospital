@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo1 from "../../public/Vector-6.png";
-import Logo2 from "../../public/Vector-7.png";
-import Logo3 from "../../public/Vector-8.png";
+import Logo1 from "../../public/vector6.png";
+import Logo2 from "../../public/vector7.png";
+import Logo3 from "../../public/vector8.png";
 import Image from "next/image";
 
 const About = () => {
