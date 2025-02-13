@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo1 from "../../public/Vector (6).png";
-import Logo2 from "../../public/Vector (7).png";
-import Logo3 from "../../public/Vector (8).png";
+import Logo1 from "../../public/Vector-6.png";
+import Logo2 from "../../public/Vector-7.png";
+import Logo3 from "../../public/Vector-8.png";
 import Image from "next/image";
 
 const About = () => {
@@ -62,7 +62,11 @@ const About = () => {
             viewport={{ once: false, amount: 0.5 }}
           >
             <div className="">
-              <Image src={Logo3} alt="Appointments Icon" className="h-10 w-10" />
+              <Image
+                src={Logo3}
+                alt="Appointments Icon"
+                className="h-10 w-10"
+              />
             </div>
             <h3 className="text-xl font-semibold mt-4">
               APPOINTMENTS & ACCESS

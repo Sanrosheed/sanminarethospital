@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Icon1 from "../../public/vector (10).png";
-import Icon2 from "../../public/Group 84.png";
-import Icon3 from "../../public/vector (11).png";
-import Icon4 from "../../public/vector (12).png";
-import Icon5 from "../../public/vector (13).png";
-import Icon6 from "../../public/vector (14).png";
-import Icon7 from "../../public/vector (15).png";
+import Icon1 from "../../public/vector-10.png";
+import Icon2 from "../../public/Group-84.png";
+import Icon3 from "../../public/vector-11.png";
+import Icon4 from "../../public/vector-12.png";
+import Icon5 from "../../public/vector-13.png";
+import Icon6 from "../../public/vector-14.png";
+import Icon7 from "../../public/vector-15.png";
 
 const Features = () => {
   const features = [
@@ -77,7 +77,9 @@ const Features = () => {
   return (
     <section id="services" className="bg-gray-100 py-10 mt-14">
       <div className="container mx-auto text-center">
-        <h3 className="text-2xl md:text-4xl font-bold">Services & Specialists</h3>
+        <h3 className="text-2xl md:text-4xl font-bold">
+          Services & Specialists
+        </h3>
         <p className="mt-2 px-4 text-gray-500">
           We offer a range of services and areas of expertise which includes
         </p>
@@ -92,14 +94,18 @@ const Features = () => {
               viewport={{ once: false, amount: 0.2 }}
             >
               <div className="flex flex-col justify-center items-center">
-                <div className={`flex justify-center items-center ${service.iconColor} rounded-full p-4 mb-4`}>
+                <div
+                  className={`flex justify-center items-center ${service.iconColor} rounded-full p-4 mb-4`}
+                >
                   <Image
                     src={service.icon}
                     alt="Service Icon"
                     className="h-8 w-8"
                   />
                 </div>
-                <h4 className="text-xl font-semibold mb-6 mt-2">{service.title}</h4>
+                <h4 className="text-xl font-semibold mb-6 mt-2">
+                  {service.title}
+                </h4>
               </div>
               <p className="mt-2 text-gray-600">{service.body}</p>
             </motion.div>
