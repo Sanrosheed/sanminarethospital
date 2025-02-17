@@ -32,6 +32,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>Sanminaret Hospital</title>
+        <meta
+          name="description"
+          content="Sanminaret Hospital. We provide the best & affordable health care. Our goal is to deliver the highest quality healthcare services. We believe that everyone deserves access to excellent medical care without compromising on quality."
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
