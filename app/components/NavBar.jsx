@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../public/Sanminaret_logo3.png";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to toggle mobile menu
@@ -10,13 +12,16 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-blue-900 p-4">
+    <nav className="bg-blue-900 py-2 px-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white text-2xl font-bold">SANMINARET</h1>
-        
+        <Image src={logo} className="w-40 h-12 md:w-72 md:h-20" alt="Logo" />
+
         {/* Hamburger icon for mobile */}
         <div className="lg:hidden">
-          <button onClick={handleToggle} className="text-white focus:outline-none ml-32">
+          <button
+            onClick={handleToggle}
+            className="text-white focus:outline-none ml-32"
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -47,9 +52,9 @@ const NavBar = () => {
 
         {/* Button for all screens */}
         <Link href="#appointment">
-        <button className="hidden lg:block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-          Book Now
-        </button>
+          <button className="hidden lg:block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+            Book Now
+          </button>
         </Link>
       </div>
 
@@ -77,10 +82,10 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-          <Link href="#appointment">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 w-full">
-              Book Now
-            </button>
+            <Link href="#appointment">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 w-full">
+                Book Now
+              </button>
             </Link>
           </li>
         </ul>
