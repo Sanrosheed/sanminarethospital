@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <div>
-      <section id="about" className="bg-blue-900 py-10 mx-10 rounded-lg">
+      <section id="about" className="bg-blue-900 py-10">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
           {/* Card 1 */}
           <motion.div
