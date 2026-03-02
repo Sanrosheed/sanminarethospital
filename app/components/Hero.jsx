@@ -5,7 +5,8 @@ import Link from "next/link";
 // import logo2 from "../../public/Sanminaret_logo4.png";
 import bg1 from "../../public/MinHero1.jpg";
 import bg2 from "../../public/MinHero2.jpg";
-import bg3 from "../../public/MinHero1.jpg";
+import bg3 from "../../public/MinHero4.jpg";
+import bg4 from "../../public/MinHero6.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade, Navigation } from "swiper/modules";
 // Swiper styles
@@ -15,7 +16,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 
 const Hero = () => {
-  const images = [bg1, bg2, bg3];
+  const images = [bg1, bg2, bg3, bg4];
 
   return (
     <section className="relative w-full h-[500px] md:h-[600px]">

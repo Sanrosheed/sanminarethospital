@@ -4,7 +4,12 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 const mapContainerStyle = {
   width: "100%",
-  height: "400px",
+  height: "200px",
+};
+
+const sanCenter = {
+  lat: 6.7117894148096875,
+  lng: 3.3070715362266148,
 };
 
 const center = {
@@ -30,7 +35,7 @@ const Appointment = () => {
       <h3 className="flex justify-center items-center text-2xl md:text-4xl font-bold">
         Book an Appointment
       </h3>
-      <div className="flex flex-col-reverse md:flex-row gap-4 items-start min-h-screen bg-gray-100 p-6">
+      <div className="flex flex-col-reverse md:flex-row gap-2 items-start min-h-screen bg-gray-100 p-6">
         {/* Left Section */}
         <div className="md:w-3/4 bg-white rounded-lg shadow-md p-6 md:mr-6">
           <h1 className="text-2xl font-bold text-blue-900 mb-4">
@@ -40,22 +45,38 @@ const Appointment = () => {
             Visit us at our hospital location. Below is the map to help you find
             us easily.
           </p>
-          <LoadScript googleMapsApiKey="AIzaSyBlDAFG4ISYzVr8w4Ahnie04YuKbIayxE8&callback=initMap">
-            {" "}
-            {/* Replace with your actual Google Maps API key */}
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              center={center}
-              zoom={15}
-            >
-              {/* Marker to show hospital location */}
-              <Marker position={center} />
-            </GoogleMap>
-          </LoadScript>
+          <div>
+            <LoadScript googleMapsApiKey="AIzaSyBlDAFG4ISYzVr8w4Ahnie04YuKbIayxE8&callback=initMap">
+              {" "}
+              <GoogleMap
+                mapContainerStyle={mapContainerStyle}
+                center={sanCenter}
+                zoom={15}
+              >
+                {/* Marker to show hospital location */}
+                <Marker position={sanCenter} />
+              </GoogleMap>
+            </LoadScript>
+          </div>
+
+          {/* Map 2 */}
+          <div className="mt-6">
+            <LoadScript googleMapsApiKey="AIzaSyBlDAFG4ISYzVr8w4Ahnie04YuKbIayxE8&callback=initMap">
+              {" "}
+              <GoogleMap
+                mapContainerStyle={mapContainerStyle}
+                center={center}
+                zoom={15}
+              >
+                {/* Marker to show hospital location */}
+                <Marker position={center} />
+              </GoogleMap>
+            </LoadScript>
+          </div>
         </div>
 
         {/* Right Section (Form) */}
-        <div className="w-full max-w-md bg-white rounded-lg shadow-md px-6 pt-6 pb-6 md:pb-32">
+        <div className="w-full max-w-md bg-white rounded-lg shadow-md px-6 pt-6 pb-6 md:pb-36">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">
             Send us a message
           </h2>
