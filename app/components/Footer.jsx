@@ -12,21 +12,21 @@ export default function Footer() {
           {/* <p>Ajumonire Street,</p> */}
           <h1 className="mb-2 text-xl">Ogun State</h1>
           <p className="mb-6 flex gap-3">
-            <FaLocationDot className="h-8 w-8" />
+            <FaLocationDot className="md:h-8 md:w-8" />
             11, Anuoluwapo Street Off Nana Apori Football Field Adiyan, Gasline
             Ogun State
           </p>
 
           <h1 className="mb-2 text-xl">Lagos State</h1>
           <p className="mb-6 flex gap-3">
-            <FaLocationDot className="h-8 w-8" />
+            <FaLocationDot className="md:h-8 md:w-8" />
             19A Ajumonire Street, Off Ritlad School, Meiran Road, Lagos State,
             Nigeria
           </p>
         </div>
 
         {/* Our Treatments */}
-        <div className="pl-12">
+        <div className="md:pl-12">
           <h3 className="font-bold mb-4">OUR TREATMENTS</h3>
           <ul className="space-y-2">
             <li>General practice</li>
