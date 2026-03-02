@@ -27,7 +27,7 @@ const NavBar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-8 text-white">
+        <ul className="hidden lg:flex space-x-12 text-white">
           <li>
             <a href="#" className="hover:text-blue-300">
               Home
