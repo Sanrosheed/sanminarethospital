@@ -8,11 +8,11 @@ import "swiper/css/navigation";
 
 const images = [
   "/san5.jpg",
-  "/san1.jpg",
+  "/sanEq1.jpg",
   "/san6.jpg",
   "/san7.jpg",
-  "/san4.jpg",
-  "/san3.jpg",
+  "/sanEq4.jpg",
+  "/sanEq3.jpg",
 ];
 
 export default function Images() {
@@ -27,7 +27,6 @@ export default function Images() {
           Clean, secure, and designed to ensure safe and efficient treatment.
         </p>
 
-        
         {/* Swiper Slider */}
         <Swiper
           modules={[Autoplay, Navigation]}
