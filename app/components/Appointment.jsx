@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import Form from "./Form";
 
 const mapContainerStyle = {
   width: "100%",
@@ -76,38 +77,7 @@ const Appointment = () => {
         </div>
 
         {/* Right Section (Form) */}
-        <div className="w-full max-w-md bg-white rounded-lg shadow-md px-6 pt-6 pb-6 md:pb-36">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">
-            Send us a message
-          </h2>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="First Name"
-              className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <textarea
-              placeholder="Message"
-              className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-24"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-blue-900 text-white px-4 py-2 rounded-full"
-            >
-              Send
-            </button>
-          </form>
-        </div>
+        <Form />
       </div>
     </motion.div>
   );

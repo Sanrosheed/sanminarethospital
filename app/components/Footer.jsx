@@ -41,9 +41,9 @@ export default function Footer() {
         <div>
           <h3 className="font-bold mb-4">QUICK LINKS</h3>
           <ul className="space-y-2">
-            <li>Practice & Team</li>
-            <li>Reviews</li>
-            <li>Fees</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Practices & Team</li>
             <li>Contact Us</li>
           </ul>
         </div>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -50,7 +51,9 @@ const Features = () => {
   return (
     <section id="services" className="bg-gray-100 py-10 mt-14">
       <div className="container mx-auto text-center">
-        <h3 className="text-2xl md:text-4xl font-bold">Our Services</h3>
+        <h3 className="ext-4xl md:text-5xl font-bold text-gray-900 mb-12">
+          Our Services
+        </h3>
         <p className="mt-2 px-4 text-gray-500">
           We offer a range of services and areas of expertise which includes
         </p>

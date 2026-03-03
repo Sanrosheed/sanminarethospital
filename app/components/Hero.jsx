@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // import logo2 from "../../public/Sanminaret_logo4.png";
@@ -17,24 +17,51 @@ import "swiper/css/navigation";
 
 const Hero = () => {
   const images = [bg1, bg2, bg3, bg4];
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const slides = [
+    {
+      image: bg1,
+      title: "Welcome to San Minaret Hospital",
+      description:
+        "We provide the best & affordable health care with modern facilities.",
+    },
+    {
+      image: bg2,
+      title: "Experienced Medical Professionals",
+      description:
+        "Our doctors and nurses are highly trained and compassionate.",
+    },
+    {
+      image: bg3,
+      title: "Advanced Diagnostic Services",
+      description: "We use state-of-the-art equipment for accurate diagnosis.",
+    },
+    {
+      image: bg4,
+      title: "24/7 Emergency Support",
+      description: "Our emergency unit is always ready to serve you.",
+    },
+  ];
 
   return (
     <section className="relative w-full h-[500px] md:h-[600px]">
       {/* Swiper */}
       <Swiper
         modules={[Autoplay, Pagination, EffectFade, Navigation]}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         navigation={true}
         effect="fade"
         loop={true}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         className="absolute inset-0 w-full h-full z-0"
       >
-        {images.map((img, index) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <Image
-              src={img}
-              alt="Doctor background"
+              src={slide.image}
+              alt={slide.title}
               fill
               priority={index === 0}
               className="object-cover"
@@ -46,13 +73,12 @@ const Hero = () => {
 
       {/* Content overlay */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-6 pointer-events-none">
-        <h1 className="text-4xl md:text-5xl font-bold">
-          Welcome to San Minaret Hospital
+        <h1 className="text-4xl md:text-5xl font-bold transition-all duration-700">
+          {slides[activeIndex].title}
         </h1>
 
-        <p className="mt-4 text-lg md:text-xl max-w-2xl">
-          We provide the best & affordable health care. Our goal is to deliver
-          the highest quality healthcare services.
+        <p className="mt-4 text-lg md:text-xl max-w-2xl transition-all duration-700">
+          {slides[activeIndex].description}
         </p>
 
         <Link href="#appointment">
