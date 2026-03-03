@@ -37,7 +37,7 @@ export default function Images() {
           breakpoints={{
             0: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }, // 👈 3 images on desktop
+            1024: { slidesPerView: 3 }, 
           }}
         >
           {images.map((img, index) => (
