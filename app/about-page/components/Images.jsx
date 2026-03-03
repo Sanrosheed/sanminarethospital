@@ -6,16 +6,14 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import img1 from "../../../public/san5.jpg";
-import img2 from "../../../public/san1.jpg";
-import img3 from "../../../public/san6.jpg";
-import img4 from "../../../public/san7.jpg";
-import img5 from "../../../public/san4.jpg";
-import img6 from "../../../public/san3.jpg";
-
-const images = [img1, img2, img3, img4, img5, img6];
-
-
+const images = [
+  "/san5.jpg",
+  "/san1.jpg",
+  "/san6.jpg",
+  "/san7.jpg",
+  "/san4.jpg",
+  "/san3.jpg",
+];
 
 export default function Images() {
   return (
@@ -39,7 +37,7 @@ export default function Images() {
           breakpoints={{
             0: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }, 
+            1024: { slidesPerView: 3 },
           }}
         >
           {images.map((img, index) => (
