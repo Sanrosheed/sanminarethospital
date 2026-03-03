@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import doctor1 from "../../../public/MinHero4.jpg";
-import doctor2 from "../../../public/MinHero4.jpg";
 import Images from "./Images";
 
 export default function AboutSection() {
@@ -11,7 +9,12 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Image */}
         <div className="relative w-full h-[500px] rounded-2xl overflow-hidden">
-          <Image src={doctor1} alt="Doctor" fill className="object-cover" />
+          <Image
+            src="/MinHero4.jpg"
+            alt="Doctor"
+            fill
+            className="object-cover"
+          />
         </div>
 
         {/* Right Content */}
@@ -143,8 +146,13 @@ export default function AboutSection() {
           </div>
 
           {/* Doctor Image */}
-          <div className="relative w-full h-[350px] mt-10 lg:mt-0">
-            <Image src={doctor2} alt="Doctor" fill className="object-contain" />
+          <div className="relative w-full h-[350px] mt-10 lg:mt-0 rounded-2xl">
+            <Image
+              src="/MinHero4.jpg"
+              alt="Doctor"
+              fill
+              className="object-contain rounded-2xl"
+            />
           </div>
         </div>
       </div>
