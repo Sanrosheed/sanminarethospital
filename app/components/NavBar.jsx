@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -29,24 +30,24 @@ const NavBar = () => {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-12 text-white">
           <li>
-            <a href="#" className="hover:text-blue-300">
+            <a href="/" className="hover:text-blue-300">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="hover:text-blue-300">
+            <Link href="/about-page" className="hover:text-blue-300">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#services" className="hover:text-blue-300">
+            <Link href="/services-page" className="hover:text-blue-300">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="hover:text-blue-300">
+            <Link href="/contact-page" className="hover:text-blue-300">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -62,24 +63,24 @@ const NavBar = () => {
       {isOpen && (
         <ul className="lg:hidden mt-4 space-y-4 text-white text-center">
           <li>
-            <a href="#" className="block hover:text-blue-300">
+            <a href="/" className="block hover:text-blue-300">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="block hover:text-blue-300">
+            <Link href="/about-page" className="block hover:text-blue-300">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#services" className="block hover:text-blue-300">
+            <Link href="/services-page" className="block hover:text-blue-300">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="block hover:text-blue-300">
+            <Link href="/contact-page" className="block hover:text-blue-300">
               Contact
-            </a>
+            </Link>
           </li>
           <li>
             <Link href="#appointment">

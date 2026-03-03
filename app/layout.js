@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Roboto, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,6 +51,16 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${nunitoSans.variable} antialiased`}
       >
         {children}
+
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          pauseOnHover
+          // theme="colored"
+        />
       </body>
     </html>
   );
