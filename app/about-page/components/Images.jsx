@@ -27,6 +27,7 @@ export default function Images() {
           Clean, secure, and designed to ensure safe and efficient treatment.
         </p>
 
+        
         {/* Swiper Slider */}
         <Swiper
           modules={[Autoplay, Navigation]}
