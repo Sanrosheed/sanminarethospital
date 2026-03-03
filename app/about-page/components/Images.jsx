@@ -15,6 +15,8 @@ import img6 from "../../../public/san3.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
+
+
 export default function Images() {
   return (
     <section className="w-full bg-gray-50 py-20">
